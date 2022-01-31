@@ -1,0 +1,8 @@
+.contacts_list {
+  list-style: decimal;
+}
+.contacts_list button {
+  margin-left: 10px;
+  border-radius: 70%;
+  background-color: orangered;
+}
