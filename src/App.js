@@ -31,7 +31,7 @@ if(this.state.contacts!==prevState.contacts){
 
   formSubmit = (contact) => {
     const inputId = nanoid();
-    if (this.state.contacts.some((el) => el.name === contact.name)) {
+    if (this.state.contacts.some((el) => el.name.toLowerCase() === contact.name)) {
       alert(contact.name + " is already in contacts");
       return;
     }
@@ -54,7 +54,7 @@ if(this.state.contacts!==prevState.contacts){
   render() {
     const { contacts, filter } = this.state;
     const filteredContacts = contacts.filter(contact =>
-      contact.name.includes(filter)
+      contact.name.toLowerCase().includes(filter)
     );
     return (
       <div>
